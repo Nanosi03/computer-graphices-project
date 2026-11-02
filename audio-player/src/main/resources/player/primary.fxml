@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<!--
+  primary.fxml = UI layout
+
+  GRAPHICS related nodes:
+  1) visualizerBars  = Equalizer bars (Controller uses setScaleY)
+  2) waveLabel       = Moving wave (Controller uses setScaleX and setScaleY)
+  3) circularVisualizer = Canvas for 2D circular drawing
+     (circles, radial lines, polar to Cartesian, AnimationTimer)
+
+  Other nodes are media player UI only.
+-->
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="player.PrimaryController"
+            styleClass="root">
+
+    <!-- TOP HEADER (UI only) -->
+    <top>
+        <VBox spacing="4" styleClass="header">
+            <padding>
+                <Insets top="12" right="20" bottom="12" left="20"/>
+            </padding>
+
+            <HBox alignment="CENTER_LEFT" spacing="15">
+                <VBox spacing="2">
+                    <Label text="INTERACTIVE 2D AUDIO VISUALIZER" styleClass="title"/>
+                    <Label text="Media Player Simulator" styleClass="subtitle"/>
+                </VBox>
+
+                <HBox HBox.hgrow="ALWAYS"/>
+
+                <Button text="⚙ Settings"
+                        onAction="#switchToSecondary"
+                        styleClass="settings-button"/>
+            </HBox>
+        </VBox>
+    </top>
+
+    <!-- CENTER -->
+    <center>
+        <VBox spacing="8" alignment="CENTER">
+            <padding>
+                <Insets top="10" right="20" bottom="10" left="20"/>
+            </padding>
+
+            <!-- GRAPHICS AREA: three visualizers -->
+            <VBox alignment="CENTER"
+                  spacing="6"
+                  styleClass="visualizer-box"
+                  VBox.vgrow="ALWAYS">
+
+                <padding>
+                    <Insets top="10" right="12" bottom="10" left="12"/>
+                </padding>
+
+                <!-- GRAPHICS 1: EQUALIZER BARS
+                     fx:id visualizerBars linked to PrimaryController
+                     Controller scales each bar with setScaleY
+                     CG concept: Scaling transform -->
+                <HBox fx:id="visualizerBars" alignment="CENTER" spacing="6">
+                    <Label text="▂" styleClass="bar"/>
+                    <Label text="▅" styleClass="bar"/>
+                    <Label text="▇" styleClass="bar"/>
+                    <Label text="█" styleClass="bar"/>
+                    <Label text="▆" styleClass="bar"/>
+                    <Label text="▃" styleClass="bar"/>
+                    <Label text="▅" styleClass="bar"/>
+                    <Label text="█" styleClass="bar"/>
+                    <Label text="▇" styleClass="bar"/>
+                    <Label text="▆" styleClass="bar"/>
+                    <Label text="▂" styleClass="bar"/>
+                    <Label text="▅" styleClass="bar"/>
+                </HBox>
+
+                <Label text="EQUALIZER BARS" styleClass="visualizer-title"/>
+
+                <!-- GRAPHICS 2: MOVING WAVE
+                     fx:id waveLabel linked to PrimaryController
+                     Controller scales with setScaleX and setScaleY
+                     CG concept: Scaling transform -->
+                <Label fx:id="waveLabel"
+                       text="〰〰〰〰〰〰〰〰〰〰〰〰"
+                       styleClass="wave"/>
+
+                <Label text="MOVING WAVE" styleClass="wave-title"/>
+
+                <!-- GRAPHICS 3: CIRCULAR VISUALIZER (Canvas)
+                     fx:id circularVisualizer linked to PrimaryController
+                     Canvas = 2D drawing surface
+                     Controller draws circles, radial lines, polar math
+                     CG concepts: 2D coordinates, shapes, scaling,
+                     color, opacity, polar to Cartesian, AnimationTimer -->
+                <Canvas fx:id="circularVisualizer"
+                        width="220"
+                        height="220"/>
+
+                <Label text="CIRCULAR AUDIO VISUALIZER" styleClass="visualizer-title"/>
+            </VBox>
+            <!-- end GRAPHICS AREA -->
+
+            <!-- SONG INFO (UI only) -->
+            <HBox alignment="CENTER_LEFT" spacing="8">
+                <Label text="Now Playing:" styleClass="now-playing-label"/>
+                <Label fx:id="songNameLabel" text="No song selected" styleClass="song-name"/>
+            </HBox>
+
+            <!-- PROGRESS (UI only) -->
+            <VBox spacing="3">
+                <Slider fx:id="progressSlider" min="0" max="100" value="0"/>
+                <HBox>
+                    <Label fx:id="currentTimeLabel" text="00:00"/>
+                    <HBox HBox.hgrow="ALWAYS"/>
+                    <Label fx:id="totalTimeLabel" text="00:00"/>
+                </HBox>
+            </VBox>
+
+            <!-- PLAYBACK CONTROLS (UI only) -->
+            <HBox alignment="CENTER" spacing="12">
+                <Button text="⏮" onAction="#previousSong" styleClass="control-button"/>
+                <Button text="▶"  onAction="#playSong"     styleClass="play-button"/>
+                <Button text="⏸" onAction="#pauseSong"    styleClass="control-button"/>
+                <Button text="⏹" onAction="#stopSong"     styleClass="control-button"/>
+                <Button text="⏭" onAction="#nextSong"     styleClass="control-button"/>
+            </HBox>
+
+            <!-- VOLUME (UI only) -->
+            <HBox alignment="CENTER" spacing="10">
+                <Label text="🔊 Volume" styleClass="now-playing-label"/>
+                <Slider fx:id="volumeSlider"
+                        min="0"
+                        max="100"
+                        value="70"
+                        prefWidth="250"/>
+            </HBox>
+
+        </VBox>
+    </center>
+
+    <!-- RIGHT: PLAYLIST (UI only) -->
+    <right>
+        <VBox spacing="10" prefWidth="220" styleClass="playlist">
+            <padding>
+                <Insets top="15" right="12" bottom="15" left="12"/>
+            </padding>
+
+            <Label text="PLAYLIST" styleClass="playlist-title"/>
+            <ListView fx:id="playlistView" VBox.vgrow="ALWAYS"/>
+            <Button text="+ Add Song"
+                    onAction="#addSong"
+                    styleClass="add-button"
+                    maxWidth="Infinity"/>
+        </VBox>
+    </right>
+
+</BorderPane>

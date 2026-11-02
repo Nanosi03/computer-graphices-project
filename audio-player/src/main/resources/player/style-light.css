@@ -1,0 +1,165 @@
+.root {
+    -fx-background-color: #f3f4f6;
+    -fx-font-family: "Arial";
+}
+
+.header {
+    -fx-background-color: #e5e7eb;
+}
+
+.title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #111827;
+}
+
+.subtitle {
+    -fx-font-size: 14px;
+    -fx-text-fill: #4b5563;
+}
+
+.visualizer-box {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+    -fx-border-color: #d1d5db;
+    -fx-border-width: 1;
+}
+
+.visualizer-title {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1f2937;
+}
+
+.bar {
+    -fx-text-fill: #2563eb;
+    -fx-font-size: 48px;
+    -fx-font-weight: bold;
+}
+
+.hint {
+    -fx-text-fill: #6b7280;
+    -fx-font-size: 12px;
+}
+
+.now-playing-label {
+    -fx-text-fill: #4b5563;
+    -fx-font-size: 13px;
+}
+
+.song-name {
+    -fx-text-fill: #111827;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+.playlist {
+    -fx-background-color: #e5e7eb;
+}
+
+.playlist-title {
+    -fx-text-fill: #111827;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+.control-button {
+    -fx-background-color: #9ca3af;
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-background-radius: 25;
+    -fx-min-width: 45px;
+    -fx-min-height: 40px;
+    -fx-cursor: hand;
+}
+
+.control-button:hover {
+    -fx-background-color: #6b7280;
+}
+
+.play-button {
+    -fx-background-color: #2563eb;
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+    -fx-background-radius: 30;
+    -fx-min-width: 55px;
+    -fx-min-height: 45px;
+    -fx-cursor: hand;
+}
+
+.play-button:hover {
+    -fx-background-color: #1d4ed8;
+}
+
+.add-button {
+    -fx-background-color: #2563eb;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-padding: 10 0 10 0;
+    -fx-cursor: hand;
+}
+
+.add-button:hover {
+    -fx-background-color: #1d4ed8;
+}
+
+.settings-button {
+    -fx-background-color: #9ca3af;
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-background-radius: 8;
+    -fx-padding: 8 16 8 16;
+    -fx-cursor: hand;
+}
+
+.settings-button:hover {
+    -fx-background-color: #6b7280;
+}
+
+.wave-title {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #059669;
+}
+
+.wave {
+    -fx-font-size: 48px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #10b981;
+    -fx-effect: dropshadow(gaussian, #10b981, 10, 0.5, 0, 0);
+}
+
+.section-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2563eb;
+}
+
+.info-text {
+    -fx-font-size: 14px;
+    -fx-text-fill: #1f2937;
+}
+
+.about-box {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 12;
+    -fx-padding: 18 22 18 22;
+    -fx-border-color: #d1d5db;
+    -fx-border-radius: 12;
+    -fx-border-width: 1;
+}
+
+.theme-button {
+    -fx-background-color: #2563eb;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-background-radius: 8;
+    -fx-padding: 10 18 10 18;
+    -fx-cursor: hand;
+}
+
+.theme-button:hover {
+    -fx-background-color: #1d4ed8;
+}

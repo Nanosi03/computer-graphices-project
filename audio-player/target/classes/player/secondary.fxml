@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+
+<VBox alignment="CENTER"
+      spacing="18"
+      xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="player.SecondaryController"
+      styleClass="root">
+
+    <padding>
+        <Insets top="30" right="40" bottom="30" left="40"/>
+    </padding>
+
+    <!-- Title -->
+    <Label text="ABOUT &amp; SETTINGS"
+           styleClass="title"/>
+
+    <Label text="Interactive 2D Audio Visualizer &amp; Media Player Simulator"
+           styleClass="subtitle"
+           wrapText="true"
+           textAlignment="CENTER"/>
+
+    <Separator/>
+
+    <!-- Theme Section -->
+    <VBox spacing="12" alignment="CENTER" styleClass="about-box">
+        <Label text="Theme Settings" styleClass="section-title"/>
+
+        <HBox spacing="15" alignment="CENTER">
+            <Button text="🌙 Dark Mode"
+                    onAction="#setDarkTheme"
+                    styleClass="theme-button"/>
+
+            <Button text="☀️ Light Mode"
+                    onAction="#setLightTheme"
+                    styleClass="theme-button"/>
+        </HBox>
+    </VBox>
+
+    <Separator/>
+
+    <!-- Student Info -->
+    <VBox spacing="8" alignment="CENTER_LEFT" styleClass="about-box">
+        <Label text="Student Information" styleClass="section-title"/>
+        
+        <Label text="Name          : Nanosi Akter" styleClass="info-text"/>
+        <Label text="Student ID    : 0322410205101003" styleClass="info-text"/>
+        <Label text="Batch         : 24th Batch" styleClass="info-text"/>
+        <Label text="Semester      : 6th" styleClass="info-text"/>
+        <Label text="Course Code   : CSE-4202" styleClass="info-text"/>
+        <Label text="Course Title  : Computer Graphics Sessional" styleClass="info-text"/>
+        <Label text="Course Teacher: Radha Rani Paul" styleClass="info-text"/>
+    </VBox>
+
+    <Separator/>
+
+    <!-- Features -->
+    <VBox spacing="8" alignment="CENTER_LEFT" styleClass="about-box">
+        <Label text="Project Features" styleClass="section-title"/>
+
+        <Label text="• Play, Pause and Stop music" styleClass="info-text"/>
+        <Label text="• Playlist support" styleClass="info-text"/>
+        <Label text="• Animated Equalizer Bars" styleClass="info-text"/>
+        <Label text="• Moving Wave Animation" styleClass="info-text"/>
+        <Label text="• Circular Audio Visualizer" styleClass="info-text"/>
+        <Label text="• Volume Control &amp; Progress Bar" styleClass="info-text"/>
+        <Label text="• Dark / Light Theme Support" styleClass="info-text"/>
+    </VBox>
+
+    <Separator/>
+
+    <!-- Back Button -->
+    <Button text="← Back to Player"
+            onAction="#switchToPrimary"
+            styleClass="add-button"
+            prefWidth="220"/>
+
+</VBox>

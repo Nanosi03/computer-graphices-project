@@ -1,0 +1,183 @@
+.root {
+    -fx-background-color: #111827;
+    -fx-font-family: "Arial";
+}
+
+.header {
+    -fx-background-color: #1f2937;
+}
+
+.title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.subtitle {
+    -fx-font-size: 14px;
+    -fx-text-fill: #9ca3af;
+}
+
+.visualizer-box {
+    -fx-background-color: #0b1220;
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+    -fx-border-color: #374151;
+    -fx-border-width: 1;
+}
+
+.visualizer-title {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #e5e7eb;
+}
+
+/* =========================
+   EQUALIZER BARS
+   ========================= */
+.bar {
+    -fx-text-fill: #2196f3;
+    -fx-font-size: 48px;
+    -fx-font-weight: bold;
+}
+
+.hint {
+    -fx-text-fill: #6b7280;
+    -fx-font-size: 12px;
+}
+
+.now-playing-label {
+    -fx-text-fill: #9ca3af;
+    -fx-font-size: 13px;
+}
+
+.song-name {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+.playlist {
+    -fx-background-color: #1f2937;
+}
+
+.playlist-title {
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+/* =========================
+   BUTTONS
+   ========================= */
+.control-button {
+    -fx-background-color: #374151;
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-background-radius: 25;
+    -fx-min-width: 45px;
+    -fx-min-height: 40px;
+    -fx-cursor: hand;
+}
+
+.control-button:hover {
+    -fx-background-color: #4b5563;
+}
+
+.play-button {
+    -fx-background-color: #2563eb;
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+    -fx-background-radius: 30;
+    -fx-min-width: 55px;
+    -fx-min-height: 45px;
+    -fx-cursor: hand;
+}
+
+.play-button:hover {
+    -fx-background-color: #1d4ed8;
+}
+
+.add-button {
+    -fx-background-color: #2563eb;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-padding: 10 0 10 0;
+    -fx-cursor: hand;
+}
+
+.add-button:hover {
+    -fx-background-color: #1d4ed8;
+}
+
+.settings-button {
+    -fx-background-color: #374151;
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-background-radius: 8;
+    -fx-padding: 8 16 8 16;
+    -fx-cursor: hand;
+}
+
+.settings-button:hover {
+    -fx-background-color: #4b5563;
+}
+
+/* =========================
+   MOVING WAVE
+   ========================= */
+.wave-title {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #7CFFB2;
+    -fx-opacity: 0.9;
+}
+
+.wave {
+    -fx-font-size: 48px;
+    -fx-font-weight: bold;
+    -fx-opacity: 0.9;
+    -fx-padding: 5 0 0 0;
+    -fx-text-fill: #7CFFB2;
+    -fx-effect: dropshadow(gaussian, #7CFFB2, 12, 0.6, 0, 0);
+}
+
+/* =========================
+   ABOUT PAGE STYLES
+   ========================= */
+.section-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #60a5fa;
+}
+
+.info-text {
+    -fx-font-size: 14px;
+    -fx-text-fill: #e5e7eb;
+}
+
+.about-box {
+    -fx-background-color: #1f2937;
+    -fx-background-radius: 12;
+    -fx-padding: 18 22 18 22;
+    -fx-border-color: #374151;
+    -fx-border-radius: 12;
+    -fx-border-width: 1;
+}
+
+/* =========================
+   THEME BUTTON
+   ========================= */
+.theme-button {
+    -fx-background-color: #2563eb;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-background-radius: 8;
+    -fx-padding: 10 18 10 18;
+    -fx-cursor: hand;
+}
+
+.theme-button:hover {
+    -fx-background-color: #1d4ed8;
+}
